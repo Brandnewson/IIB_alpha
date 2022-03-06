@@ -15,7 +15,10 @@ router.get('/new', async (req, res) => {
   })
 })
 
-
+router.get('/screener_list', async (req, res) => {
+  const screener = await Screener.find().sort({ createdAt: 'desc' })
+  res.render('screeners/screener_list', { screener: screener})
+})
 
 router.get('/edit/:id', async (req, res) => {
   const screener = await Screener.findById(req.params.id)
