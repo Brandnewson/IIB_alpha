@@ -4,6 +4,8 @@ const Screener = require('../models/screener')
 const Filter = require('../models/filter')
 const router = express.Router()
 
+
+
 router.get('/new', async (req, res) => {
 //insert test filters if needed here!!!
   Filter.find({}, function(err, filtersMiddle){

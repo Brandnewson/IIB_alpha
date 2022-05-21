@@ -10,13 +10,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chart.js": "^3.7.1",
     "dompurify": "^2.3.4",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
+    "joi": "^17.6.0",
+    "joi-objectid": "^4.0.2",
     "jsdom": "^16.2.1",
     "marked": "^0.8.0",
     "method-override": "^3.0.0",
     "mongoose": "^5.9.4",
+    "node-fetch": "^2.6.7",
+    "node-iex-cloud": "^2.1.1",
     "popper.js": "^1.16.1",
     "slugify": "^1.6.3"
   },

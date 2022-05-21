@@ -5,6 +5,17 @@ const createDomPurify = require('dompurify')
 const { JSDOM } = require('jsdom')
 const dompurify = createDomPurify(new JSDOM().window)
 
+const { IEXCloudClient } = require("node-iex-cloud");
+const fetch = require("node-fetch");
+
+const iex_module = new IEXCloudClient(fetch, {
+  sandbox: false,
+  publishable: "pk_093942da8e7e4dd0ae2d7d7343a28a7c",
+  version: "stable"
+});
+
+iex_module.symbol("googl").financials("quarterly").then(res => console.log(res));
+
 const screenerSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -36,5 +47,6 @@ screenerSchema.pre('validate', function(next) {
 
   next()
 })
+
 //passing it to "Screener"
 module.exports = mongoose.model('Screener', screenerSchema)

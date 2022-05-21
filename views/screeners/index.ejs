@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--ChartJS version: 3.7.1-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="/public/assets/styles.css">
@@ -16,14 +18,23 @@
     </form>
 
     <div class ="jumbotron">
-      <input type="text" class="stonk_wide" placeholder="Search 100,000 stocks worldwide">
+      <input type="text" id="my_stock" class="stonk_wide" placeholder="Search 100,000 stocks worldwide">
     </div>
 
     <h2>Market Updates</h2>
-    <p>Today's GLOBAL ratio is: </p>
+    <p>The DJI is down by 5 points <break></break>
+      Many are panic-selling
+      Buffett sitting on a pile of cash?
+    </p>
 
+    <form action="/screeners" method="POST">
+      <%- include('_chart_test') %>
+  
+    </form>
 
     
   </div>
+  <script src="/public/js/filter_bank.js"></script>
+  <script src="/public/js/search_stock.js"></script>
 </body>
 </html>
