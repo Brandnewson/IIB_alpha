@@ -7,8 +7,6 @@ I wanted to marry the passion I have of investing and coding together. The end g
 - Allows users to customise what parts of the analysis they wish to be shown & hidden
 - Keeps repositories of stocks that users have analysed including user's personal notes
 
-Ultimately a very ambitious project
-
 <h2> :pencil:Method: </h2>
 Using a MERN stack, combined with Data Visualisation tool Chart.JS, I should be able to create a scalable Web-application.
 Currently has the following features:
